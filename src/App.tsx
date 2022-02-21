@@ -1,11 +1,9 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Routes} from './routes';
 
 const App = () => {
   return (
-    <View>
-      <Text> OI</Text>
-    </View>
+    <Routes/>
   );
 };
 export default App;
