@@ -7,6 +7,11 @@ export default {
       primarysilver: '#F8F8F8',
       primarywhite: '#ffffff',
 
-      //gradientblue: 
+      gradientBluePrimary: '#005bea',
+      gradientBlueSecondary: '#00c6fb',
+      gradientPurpleSecondary: '#B224EF',
+      gradientGreenSecondary: '#0BA360',
+      gradientPinkSecondary:' #FF7EB3 ',
+
   },
 } as const;
