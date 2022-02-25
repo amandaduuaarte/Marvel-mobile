@@ -5,13 +5,11 @@ import {Container} from './styled'
 
 const Home = () => {
   return (
-  <ScrollView>
-      <Container>
-        <Navbar/>
-        <Header/>
-        <List/>
-      </Container>
-  </ScrollView>
+    <Container>
+      <Navbar/>
+      <Header/>
+      <List/>
+    </Container>
 );
 }
 

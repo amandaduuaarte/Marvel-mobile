@@ -10,7 +10,7 @@ const List = ({children}) =>{
         <CardTitle color="#F2264B" weight="bold"> 
           Vilões
         </CardTitle>
-        <CardTitle color="#B7B7B7">Ver tudo</CardTitle>
+        <CardTitle color="#B7B7B7" >Ver tudo</CardTitle>
       </TextContainer>
       <ScrollView horizontal={true}>
         <Card />
