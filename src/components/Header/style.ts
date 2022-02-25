@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  height: 55%;
+  height: 40%;
   width: 100%;
-  padding: 24px;
+  padding: 0 24px;
 `;
 
 export const WelcomeText = styled.Text`

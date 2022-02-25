@@ -1,13 +1,17 @@
 import React from 'react';
-import {Navbar , Header} from '../../components';
+import {ScrollView} from 'react-native';
+import {Navbar , Header, List} from '../../components';
 import {Container} from './styled'
 
 const Home = () => {
   return (
-  <Container>
-      <Navbar/>
-      <Header/>
-  </Container>
+  <ScrollView>
+      <Container>
+        <Navbar/>
+        <Header/>
+        <List/>
+      </Container>
+  </ScrollView>
 );
 }
 
