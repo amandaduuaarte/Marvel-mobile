@@ -1,13 +1,14 @@
 import React from 'react';
-import {Navbar , Header} from '../../components';
+import {Navbar , Header, ListComponent} from '../../components';
 import {Container} from './styled'
 
 const Home = () => {
   return (
-  <Container>
+    <Container>
       <Navbar/>
       <Header/>
-  </Container>
+      <ListComponent/>
+    </Container>
 );
 }
 
