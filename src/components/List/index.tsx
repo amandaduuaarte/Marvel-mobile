@@ -8,7 +8,7 @@ const List = ({children}) =>{
     <Container>
       <TextContainer>
         <CardTitle color="#F2264B" weight="bold"> 
-          Vilões
+          {children}
         </CardTitle>
         <CardTitle color="#B7B7B7" >Ver tudo</CardTitle>
       </TextContainer>

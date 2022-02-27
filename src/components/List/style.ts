@@ -1,15 +1,13 @@
 import styled from 'styled-components/native';
-import theme from '../../assets/styles/theme';
 
 export const Container = styled.View`
-  height:45%;
+  height: 45%;
   width: 100%;
   padding: 0 24px;
 
   display: flex;
   flex-direction: column;
   justify-content:space-between;
-  margin-top: 48px;
 `;
 
 export const Card = styled.View`
@@ -21,7 +19,7 @@ export const Card = styled.View`
 `;
 
 export const TextContainer = styled.View`
-  display:flex;
+  display: flex;
   flex-flow: row;
   justify-content: space-between;
 `;

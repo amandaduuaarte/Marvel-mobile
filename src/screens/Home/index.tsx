@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
-import {Navbar , Header, List} from '../../components';
+import {Navbar , Header, List, ListComponent} from '../../components';
 import {Container} from './styled'
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <Container>
       <Navbar/>
       <Header/>
-      <List/>
+      <ListComponent/>
     </Container>
 );
 }
