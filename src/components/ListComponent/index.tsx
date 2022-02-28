@@ -1,16 +1,22 @@
-import React from 'react';
-import { Container } from './style';
-import List  from '../List';
-import { ScrollView } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {Container} from './style';
+import List from '../List';
+import {ScrollView} from 'react-native';
+import {Api} from '../../services/api';
 
 const ListComponent = () =>{
+  const [groupOfCharacters, setgroupOfCharacters] = useState([]);
+  
+  useEffect(()=>{
+    Api.get('/all').then(response => {
+      setgroupOfCharacters(response.data)});
+      }, [groupOfCharacters])
   return (
     <ScrollView verticalScroll={true}>
       <Container>
-        <List> Herois </List>
-        <List> Vilões </List>
-        <List> Anti-herois </List>
-        <List> Anti-herois </List>
+        {groupOfCharacters.map(itens => {
+          return ( <List> {itens.title} </List> )
+        })} 
       </Container>
     </ScrollView>
   )
