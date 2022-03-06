@@ -1,7 +1,7 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 
-import {UserStackRoutes} from './user.stack.routes';
+import { UserStackRoutes } from './user.stack.routes';
 
 export function Routes() {
   return (
