@@ -13,11 +13,27 @@ export const Container = styled.View`
 export const Card = styled.View`
   height: 230px;
   width: 140px;
-  border-radius:10px;
+  border-radius: 10px;
   margin-right: 16px;
-  background:${({theme}) => theme.colors.primarydark};
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
 `;
 
+export const CardTexts = styled.View`
+  height: 60px;
+  width: 90%;
+  margin: 12px;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+`;
+export const BackgroundCard = styled.Image`
+  height:100%;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+`;
 export const TextContainer = styled.View`
   display: flex;
   flex-flow: row;
@@ -27,10 +43,11 @@ export const CardTitle = styled.Text.attrs(props => ({
   color: props.color || '#000000',
   weight: props.weight || 400,
   size: props.size || '18px',
+  bottom : props.bottom || '2px',
 }))`
   font-size: ${props => props.size};
   line-height: 18px;
   font-weight: ${props=> props.weight};
-  margin-bottom: 16px;
+  margin-bottom: ${props=> props.bottom};
   color: ${props => props.color};
 `;
