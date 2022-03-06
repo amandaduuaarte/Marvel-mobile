@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {ScrollView} from 'react-native';
-import {Container, TextContainer, CardTitle, Card, CardTexts} from './style';
+import {ScrollView, FlatList} from 'react-native';
+import {Container, TextContainer, CardTitle, Card, BackgroundCard, CardTexts} from './style';
 import {Api} from '../../services/api';
+import img from '../../assets/images/chars/spider-man.png';
 
 
 const List = ({children}) =>{
@@ -11,7 +12,6 @@ const List = ({children}) =>{
     Api.get('/all').then(response => {
       setCharacters(response.data);
     });
-    console.log(characters)
   }, [characters]);
  
   return (
@@ -25,15 +25,15 @@ const List = ({children}) =>{
       <ScrollView horizontal={true}>
          {characters.map(itens => {
           return (
-            <Card> 
+            <Card>
+              <BackgroundCard source={img} />
               <CardTexts>
                 <CardTitle color="#B7B7B7" size="10px">{itens.characters[0].alterEgo}</CardTitle> 
-                <CardTitle color="#B7B7B7" size="18px" weight="bold">{itens.characters[0].name}</CardTitle>
+                <CardTitle color="#ffff" size="18px" weight="bold">{itens.characters[0].name}</CardTitle>
               </CardTexts>
             </Card>
-          )
-        })} 
-      
+          );
+        })}
       </ScrollView>
     </Container>
   )

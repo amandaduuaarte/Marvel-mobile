@@ -15,7 +15,6 @@ export const Card = styled.View`
   width: 140px;
   border-radius: 10px;
   margin-right: 16px;
-  background:${({theme}) => theme.colors.primarydark};
   display: flex;
   flex-flow: row;
   align-items: flex-end;
@@ -27,6 +26,13 @@ export const CardTexts = styled.View`
   margin: 12px;
   display: flex;
   flex-flow: column;
+  position: absolute;
+`;
+export const BackgroundCard = styled.Image`
+  height:100%;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
 `;
 export const TextContainer = styled.View`
   display: flex;
