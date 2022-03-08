@@ -8,7 +8,7 @@ export function UserStackRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="home" component={Home} />
-      <Screen name="Character" component={Character} />
+      <Screen name="character" component={Character} />
     </Navigator>
   );
 }

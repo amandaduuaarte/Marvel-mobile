@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, FlatList } from 'react-native';
+import { TouchableOpacity, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
   Container,
   TextContainer,
@@ -20,6 +21,7 @@ const List = ({ children }) => {
     });
   }, [characters]);
 
+  const navigation = useNavigation();
   return (
     <Container>
       <TextContainer>
@@ -28,20 +30,23 @@ const List = ({ children }) => {
         </CardTitle>
         <CardTitle color="#B7B7B7">Ver tudo </CardTitle>
       </TextContainer>
+
       <ScrollView horizontal={true}>
         {characters.map((itens) => {
           return (
-            <Card>
-              <BackgroundCard source={img} />
-              <CardTexts>
-                <CardTitle color="#B7B7B7" size="10px">
-                  {itens.characters[0].alterEgo}
-                </CardTitle>
-                <CardTitle color="#ffff" size="18px" weight="bold">
-                  {itens.characters[0].name}
-                </CardTitle>
-              </CardTexts>
-            </Card>
+            <TouchableOpacity onPress={() => navigation.navigate('character')}>
+              <Card>
+                <BackgroundCard source={img} />
+                <CardTexts>
+                  <CardTitle color="#B7B7B7" size="10px">
+                    {itens.characters[0].alterEgo}
+                  </CardTitle>
+                  <CardTitle color="#ffff" size="18px" weight="bold">
+                    {itens.characters[0].name}
+                  </CardTitle>
+                </CardTexts>
+              </Card>
+            </TouchableOpacity>
           );
         })}
       </ScrollView>
